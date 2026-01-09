@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "LJI Auto Login",
+    "version": "1.0",
+    "description": "Auto-clicks login button on login.searchlightdata.org",
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": [
+        "https://login.searchlightdata.org/*"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "LJI Auto Login"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://login.searchlightdata.org/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_start"
+        }
+    ]
+}
