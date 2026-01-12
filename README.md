@@ -4,53 +4,48 @@
 
 ## Prerequisite Hardware
 
-- Raspberry Pi
+- **`Raspberry Pi`**
     - The exact model we used was the `Model 4 B`, but as long as it has display and WiFi capabilities, then it should be fine.
 
-- MicroSD Card
+- **`MicroSD Card`**
     - Doesn't need to be too big, just big enough to hold the OS and some cookies.
 
-- Power Cable
+- **Power Cable**
     - The `Model 4 B` uses `USB-C` but some other models use `Micro-USB`
 
-- Display Cable
-    - Most Raspberry Pis use a `Micro-HDMI`
+- **Display Cable**
+    - Most `Raspberry Pi`s use a `Micro-HDMI`
         - If you already have a normal `HDMI` cable then you can get an adapter.
         - If not, then you can just get a `HDMI` to `Micro-HDMI` cable.
 
-- TV/Monitor
-    - It doesn't matter if it is a *"smart"* TV, all it needs is a display port for the Raspberry Pi to connect to.
+- **TV/Monitor**
+    - It doesn't matter if it is a "*smart*" TV, all it needs is a display port for the `Raspberry Pi` to connect to.
 
 ## Raspberry Pi Setup Steps
 
-1. Get an OS from [Raspberry Pi OS Downloads](https://www.RaspberryPi.com/software/operating-systems/) *(unless your Raspberry Pi did not already come with an OS preloaded on the MicroSD card)*.
+1. Get an OS from [Raspberry Pi OS Downloads](https://www.RaspberryPi.com/software/operating-systems/) *(unless your `Raspberry Pi` did not already come with an OS preloaded on the MicroSD card)*.
     - We used `Raspbian GNU/Linux 12 Bookworm 32-bit`
 
 2. Burn the downloaded OS to a `MicroSD` card *(if needed)*
 
-3. Insert the `MicroSD` card into the Raspberry Pi's `MicroSD` card slot.
+3. Insert the `MicroSD` card into the `Raspberry Pi`'s `MicroSD` card slot.
 
-4. Connect the Raspberry Pi to a power source
-    - *Some TVs have USB ports on them to supply power to streaming devices like Chromecasts, Rokus, Fire Sticks, etc... .  If the TV has this, then use that to power the Raspberry Pi, so it turns on with the TV.*
-    - If the TV doesn't have this, then just use another outlet and (un)plug the power cable to turn the Raspberry Pi on & off.
+4. Connect the `Raspberry Pi` to a power source
+    - *Some TVs have USB ports on them to supply power to streaming devices like Chromecasts, Rokus, Fire Sticks, etc... .  If the TV has this, then use that to power the `Raspberry Pi`, so it turns on with the TV.*
+    - If the TV doesn't have this, then just use another outlet and (un)plug the power cable to turn the `Raspberry Pi` on & off.
 
-5. Connect the display cable to the Raspberry Pi and the TV
+5. Connect the display cable to the `Raspberry Pi` and the TV
     - Make sure that the TV is set to auto-detect input, or set it to always go to `HDMI 1` *(or something like that by default)*.
     - *The TV might have a sleep timer set to turn off after a while if no remote buttons are pressed.  You might have to change this in the settings.*
 
 6. Finish the OS setup process
     - **This will require a mouse and keyboard**
-        - The `Model 4 B` has 2 USB 2.0 & 2 USB 3.0 ports
         - Other models might use Micro-USB and might need a splitter to use both mouse & keyboard *(even though the model might have 2 `Micro-USB` ports, 1 will be used for the power cable)*
-    - Make sure to choose `Chromium` as the browser and **not** `Firefox`!
 
-7. Setup the Internet connection:
     - If using WiFi:
-        - Then you must have it attached to the display you want so you can see the menu for setup.
         - Connect it to the desired network, by entering the password.
-    - If the Raspberry Pi has an Ethernet port *(like the `Model 4 B`)*:
+    - If the `Raspberry Pi` has an Ethernet port *(like the `Model 4 B`)*:
         - Insert the Ethernet cable into the Ethernet port and ensure that it has an Internet connection.
-
 8. Run [setup.sh](setup.sh) to create the autostarting functionality:
     - **Before you run the [setup.sh](setup.sh), go into [autostart](Autostart%20Scripts/autostart) and change `user_name` to whatever username you used to setup the OS in `Step 6`.**
         - [setup.sh](setup.sh) will give an error and stop running if it detects that [autostart](Autostart%20Scripts/autostart) still says: `/home/user_name/run-chromium.sh`.
@@ -89,8 +84,7 @@ Now the autostart functionality should be set.  Test this by restarting the `Ras
 
 **Setup is complete!**
 
-You can now unplug the mouse & keyboard.  You should now be able to display the dashboard by simply turning on the Raspberry Pi and TV.  The startup script will open the dashboard, once the computer boots to the desktop.
 
-# Notes
+## Notes
 
-If there is no WiFi, then it will infinitely ping `google.com`, so if the WiFi network is broken then just turn the TV and Raspberry Pi off and then back on once the network is fixed.  Or just leave it on, and it will reconnect eventually, if the network gets fixed.
+If there is no WiFi, then it will infinitely ping `google.com`, so if the WiFi network is broken then just turn the TV and `Raspberry Pi` off and then back on once the network is fixed.  Or just leave it on, and it will reconnect eventually, if the network gets fixed.
