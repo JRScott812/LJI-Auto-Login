@@ -3,19 +3,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if (result.username) document.getElementById('username').value = result.username;
         if (result.password) document.getElementById('password').value = result.password;
     });
-    
+
     document.getElementById('saveBtn').addEventListener('click', () => {
         const username = document.getElementById('username').value.trim();
         const password = document.getElementById('password').value.trim();
-        
+
         if (!username || !password) {
             showMessage('Enter both fields', 'error');
             return;
         }
-        
+
         chrome.storage.local.set({ username, password }, () => showMessage('Saved!', 'success'));
     });
-    
+
     document.getElementById('clearBtn').addEventListener('click', () => {
         chrome.storage.local.remove(['username', 'password'], () => {
             document.getElementById('username').value = '';

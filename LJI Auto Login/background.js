@@ -80,9 +80,11 @@ chrome.webRequest.onBeforeRedirect.addListener(
       /* ignore URL parse errors */
     }
   },
-  { urls: [
+  {
+    urls: [
       `https://${APP_HOST}/*`
-    ], types: ['main_frame'] }
+    ], types: ['main_frame']
+  }
 );
 
 // 2) After login finishes and we land back on the app, restore the intended URL

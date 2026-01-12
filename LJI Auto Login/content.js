@@ -1,5 +1,13 @@
+let attempts = 0;
+const MAX_ATTEMPTS = 20;
+
 // Fill fields with stored credentials and submit
 function autoLogin() {
+    if (attempts++ > MAX_ATTEMPTS) {
+        console.error('Failed to find login form after max attempts');
+        return;
+    }
+
     chrome.storage.local.get(['username', 'password'], (result) => {
         if (!result.username || !result.password) {
             console.log('No credentials saved');
