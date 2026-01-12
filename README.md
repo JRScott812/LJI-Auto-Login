@@ -57,45 +57,33 @@
     - [setup.sh](setup.sh) will do 2 things:
         1. Copy [autostart](Autostart%20Scripts/autostart) to `~/.config/labwc/autostart`
         2. Copy [run-chromium.sh](Autostart%20Scripts/run-chromium.sh) to `~/run-chromium.sh`
-    - Now the autostart functionality should be set.  Test this by restarting the `Raspberry Pi`.
-        - Once the `Raspberry Pi` has booted to the desktop, it should open the site after a few seconds.
+        3. Load the [LJI Auto Login](LJI%20Auto%20Login/) browser extension.
+
+Now the autostart functionality should be set.  Test this by restarting the `Raspberry Pi`.  Once the `Raspberry Pi` has booted to the desktop, it should open the site after a few seconds.
 
 
 ## Setting up the `Dashboard Site`
 
 ### Setting up `Chromium`
-- Open `Chromium` and go to the [Love Justice International Dashboard](https://LoveJustice.ngo)
-
 - If prompted for a `KeyRing` just leave the fields blank and continue
     - It will give you a security warning, but just continue again.
 
-- Then login with the `Dashboard Display Account` *(It is a organization-wide account that can view **all** data, but edit **no** data)*:
-    - When asked to save credentials, say `Never`
-        - This is because the credentials will be saved in the extension, **not the browser**.
-        - This will prevent the `Save Credentials` dialog from ever popping up again.
-
-### Setting up `LJI Auto Login`
-1. Go into the `Extensions` settings in 2 ways:
-    1. Go to [chrome://extensions/](chrome://extensions/)
-    2. Click the `🧩` icon near the search bar
-        - Then click `⚙️ Manage extensions`
-
-2. Enable `Developer Mode` via the switch
-
-3. Click `🗄️ Load Unpacked`
-
-4. Select the folder [LJI Auto Login Web Extension](Web%20Extension/) in this repository.
-
 ### Saving Credentials
-1. Now that the extension is loaded, you can view all browser extensions by clicking the `🧩` icon near the search bar.
+1. Now that the [LJI Auto Login](LJI%20Auto%20Login/) browser extension is loaded, you can view all browser extensions by clicking the `🧩` icon near the search bar.
 
 2. Click on the `LJI Auto Login` extension from the list.
 
-3. Enter the credentials for the `Display Account`
+3. Enter the `email`/`username` & `password` for the `Display Account` *(It is a organization-wide account that can view **all** data, but edit **no** data)*.
 
 4. Click `Save`
 
-**Now it should automatically log back into Searchlight after it gets logged out.**
+### Initial site login
+1. Open `Chromium` and go to the [Love Justice International Dashboard](https://LoveJustice.ngo)
+
+2. The [LJI Auto Login](LJI%20Auto%20Login/) browser extension should automatically log in to the site:
+    - When asked to save credentials, say `Never`
+        - This is because the credentials will be saved in the extension, **not the browser**.
+        - This will prevent the `Save Credentials` dialog from ever popping up again.
 
 # Conclusion
 
