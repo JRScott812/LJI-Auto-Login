@@ -46,13 +46,18 @@
         - Connect it to the desired network, by entering the password.
     - If the `Raspberry Pi` has an Ethernet port *(like the `Model 4 B`)*:
         - Insert the Ethernet cable into the Ethernet port and ensure that it has an Internet connection.
-8. Run [setup.sh](setup.sh) to create the autostarting functionality:
+        
+7. Run [setup.sh](setup.sh) to create the autostarting functionality:
     - **Before you run the [setup.sh](setup.sh), go into [autostart](Autostart%20Scripts/autostart) and change `user_name` to whatever username you used to setup the OS in `Step 6`.**
         - [setup.sh](setup.sh) will give an error and stop running if it detects that [autostart](Autostart%20Scripts/autostart) still says: `/home/user_name/run-chromium.sh`.
     - [setup.sh](setup.sh) will do 2 things:
         1. Copy [autostart](Autostart%20Scripts/autostart) to `~/.config/labwc/autostart`
         2. Copy [run-chromium.sh](Autostart%20Scripts/run-chromium.sh) to `~/run-chromium.sh`
         3. Load the [LJI Auto Login](LJI%20Auto%20Login/) browser extension.
+    - Open a `Terminal` window:
+        - Navigate to the folder where [setup.sh](setup.sh) is located using `cd`.
+        - Make [setup.sh](setup.sh) executable by running the command `chmod +x setup.sh`
+        - Run the script by doing `./setup.sh`
 
 Now the autostart functionality should be set.  Test this by restarting the `Raspberry Pi`.  Once the `Raspberry Pi` has booted to the desktop, it should open the site after a few seconds.
 
