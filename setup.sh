@@ -10,9 +10,4 @@ cp "Autostart Scripts/run-chromium.sh" "$HOME/run-chromium.sh" || { echo "Error:
 echo "Applying executable permissions to run-chromium.sh..."
 chmod +x "$HOME/run-chromium.sh"
 
-echo "Setting up browser extension..."
-EXT_INSTALL_DIR="$HOME/.local/share/lji-auto-login-extension"
-mkdir -p "$EXT_INSTALL_DIR"
-cp -r "LJI Auto Login/"* "$EXT_INSTALL_DIR/" || { echo "Error: Failed to copy extension files"; exit 1; }
-
 echo "Setup complete!"
